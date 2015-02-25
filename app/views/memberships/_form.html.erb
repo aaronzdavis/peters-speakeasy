@@ -1,0 +1,17 @@
+<%= form_for @membership do |f| %>
+  <div class="ui form segment">
+    <div class="two fields">
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <button class="ui primary button">
+      <i class="shop icon"></i> $1200 Purchase Membership
+    </button>
+  </div>
+<% end %>
