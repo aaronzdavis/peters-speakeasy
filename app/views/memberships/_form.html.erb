@@ -1,17 +1,26 @@
 <%= form_for @membership do |f| %>
   <div class="ui form segment">
-    <div class="two fields">
+    <!-- <div class="two fields">
       <div class="field">
         <%= f.label :email %><br>
         <%= f.text_field :email %>
-      </div>
-      <div class="field">
-        <%= f.label :name %><br>
-        <%= f.text_field :name %>
-      </div>
+      </div> -->
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
     </div>
-    <button class="ui primary button">
+
+    <!-- </div> -->
+    <!-- <button class="ui primary button">
       <i class="shop icon"></i> $1200 Purchase Membership
-    </button>
+    </button> -->
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-name="Peter's Speakeasy"
+          data-description="Membership for One"
+          data-amount="120000"></script>
+
   </div>
 <% end %>
