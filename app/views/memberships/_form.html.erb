@@ -20,7 +20,7 @@
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-name="Peter's Speakeasy"
           data-description="Membership for One"
-          data-amount="120000"></script>
+          data-amount="<%= Membership.default_fee %>"></script>
 
   </div>
 <% end %>

@@ -1,0 +1,22 @@
+<ul>
+  <% @members.each do |member| %>
+
+    <li>
+      <%= member.id %> <%= member.created_at.strftime("%D") %> <strong><%= member.name %></strong> (<%= member.email %>)
+    </li>
+
+  <% end %>
+</ul>
+
+
+<h1>Inactive Memebrs</h1>
+
+<ul>
+  <% @inactive_members.each do |member| %>
+
+    <li>
+      <%= member.id %> <%= member.created_at.strftime("%D") %> <strong><%= member.name %></strong> (<%= member.email %>)
+    </li>
+
+  <% end %>
+</ul>
